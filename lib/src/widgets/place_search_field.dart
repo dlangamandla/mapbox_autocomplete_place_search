@@ -7,6 +7,7 @@ import '../services/mapbox_geocoding_service.dart';
 class PlaceSearchField extends StatefulWidget {
   final String accessToken;
   final String? hintText;
+  final Color? fillColor;
   final Function(Place)? onPlaceSelected;
   final int maxResults;
 
@@ -14,6 +15,7 @@ class PlaceSearchField extends StatefulWidget {
     super.key,
     required this.accessToken,
     this.hintText,
+    this.fillColor;
     this.onPlaceSelected,
     this.maxResults = 5,
   });
@@ -170,7 +172,8 @@ class _PlaceSearchFieldState extends State<PlaceSearchField> {
           controller: _controller,
           onChanged: _onTextChanged,
           decoration: InputDecoration(
-            hintText: widget.hintText ?? 'Search for a place...',
+            hintText: widget.hintText ?? 'Search for a place',
+            fillColor:  widget.fillColor,
             suffixIcon: _isLoading ? const CircularProgressIndicator() : null,
             border: const OutlineInputBorder(),
           ),
