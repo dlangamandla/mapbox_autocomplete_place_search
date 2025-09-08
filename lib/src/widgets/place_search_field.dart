@@ -173,7 +173,7 @@ class _PlaceSearchFieldState extends State<PlaceSearchField> {
           onChanged: _onTextChanged,
           decoration: InputDecoration(
             hintText: widget.hintText ?? 'Search for a place',
-            fillColor:  fillColor: Colors.blueGrey[50],,
+            fillColor:  fillColor: Colors.blueGrey[50],
             suffixIcon: _isLoading ? const CircularProgressIndicator() : null,
             border: const OutlineInputBorder(),
           ),
