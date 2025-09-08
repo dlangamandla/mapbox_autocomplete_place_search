@@ -15,7 +15,7 @@ class PlaceSearchField extends StatefulWidget {
     super.key,
     required this.accessToken,
     this.hintText,
-    this.fillColor;
+    this.fillColor,
     this.onPlaceSelected,
     this.maxResults = 5,
   });
